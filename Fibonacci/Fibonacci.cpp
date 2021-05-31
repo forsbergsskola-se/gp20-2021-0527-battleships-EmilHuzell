@@ -21,7 +21,7 @@ int fibonacciLoop(int number) {
     }
     int value = 1;
     int prevValue = 0;
-    for (int i = 0; i < number; i++) {
+    for (int i = 1; i < number; i++) {
 
         int newValue = value + prevValue;
         prevValue = value;
@@ -35,7 +35,7 @@ int main()
     int number;
     while (true) {
         std::cin >> number;
-        std::cout << fibonacciLoop(number);
+        std::cout << fibonacci(number);
     }
     
 }
