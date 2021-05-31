@@ -11,11 +11,33 @@ int fibonacci(int number) {
         return 1;
     }
     return fibonacci(number - 1) + fibonacci(number - 2);
+}
+int fibonacciLoop(int number) {
+    if (number == 0) {
+        return 0;
+    }
+    if (number == 1) {
+        return 1;
+    }
+    int value = 1;
+    int prevValue = 0;
+    for (int i = 0; i < number; i++) {
+
+        int newValue = value + prevValue;
+        prevValue = value;
+        value = newValue;
+    }
+    return value;
 
 }
 int main()
 {
-    std::cout << fibonacci(0);
+    int number;
+    while (true) {
+        std::cin >> number;
+        std::cout << fibonacciLoop(number);
+    }
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
