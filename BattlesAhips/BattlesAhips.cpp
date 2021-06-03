@@ -5,16 +5,30 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    bool board[10][10] = {false};
+
+    int piecesPlaced = 0;
+    while (piecesPlaced < 5) 
+    {
+        std::cout << "Chose a row to place a boat on" << '\n';
+        int row;
+        std::cin >> row;
+
+        std::cout << "Chose a column to place a boat on" << '\n';
+        int column;
+        std::cin >> column;
+
+        board[row][column] = true;
+        piecesPlaced++;
+    }
+
+    std::cout << '\n';
+
+    for (int y = 0; y < 10; y++) {
+        for (int x = 0; x < 10; x++) {
+            std::cout << board[x][y] << '\n';
+        }
+    }
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
