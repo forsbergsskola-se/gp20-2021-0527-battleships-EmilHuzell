@@ -16,10 +16,15 @@ int main()
 
     float minOffset;
     int minOffsetInt;
+
+    float combinedOffset = 0;
+    float avarageOffset;
     for (int i = 0; i < 20; i++) {
          //integers[i] * 100 / 100000 more readable than integers[i] / 1000
          float Percentage = (float)integers[i] * 100 / 100000;
          float offset = abs(Percentage - 5);
+         combinedOffset += offset;
+          
 
          if (i == 0) {
              maxOffset = offset;
@@ -39,22 +44,14 @@ int main()
 
          //Personally dont consider the i+1 cheating, check with marc, string interpolation needed,
          std::cout << "Number " << i+1 << ": " << integers[i] << '(' << Percentage << ')'<< '\n';
-         
     }
-
+ 
     std::cout << '\n';
     std::cout << "MaxOffset: Number " << maxOffsetInt << " " << maxOffset << '\n';
     std::cout << "MinOffset: Number " << minOffsetInt << " " << minOffset << '\n';
 
+    avarageOffset = combinedOffset / 20;
+    std::cout << "AvarageOffset: " << avarageOffset << '\n';
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
