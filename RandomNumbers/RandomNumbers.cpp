@@ -12,7 +12,14 @@ int main()
     }
 
     for (int i = 0; i < 20; i++) {
-         std::cout << "Number " << i+1 << ": " << integers[i] << '(' << integers[i] * 100/100000 << ')'<< '\n';
+        //Personally dont consider the i+1 cheating, check with marc, string interpolation needed, integers[i] * 100 / 100000 more readable than integers[i] / 1000
+
+         float Percantage = (float)integers[i] * 100 / 100000;
+         std::cout << "Number " << i+1 << ": " << integers[i] << '(' << Percantage << ')'<< '\n';
+
+
+
+
     }
 }
 
