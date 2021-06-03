@@ -35,6 +35,7 @@ int main()
     int number;
     while (true) {
         std::cin >> number;
+        
         std::cout << fibonacci(number);
     }
     
