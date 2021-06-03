@@ -11,16 +11,41 @@ int main()
         integers[rand() % 20]++;
     }
 
+    float maxOffset;
+    int maxOffsetInt;
+
+    float minOffset;
+    int minOffsetInt;
     for (int i = 0; i < 20; i++) {
-        //Personally dont consider the i+1 cheating, check with marc, string interpolation needed, integers[i] * 100 / 100000 more readable than integers[i] / 1000
+         //integers[i] * 100 / 100000 more readable than integers[i] / 1000
+         float Percentage = (float)integers[i] * 100 / 100000;
+         float offset = abs(Percentage - 5);
 
-         float Percantage = (float)integers[i] * 100 / 100000;
-         std::cout << "Number " << i+1 << ": " << integers[i] << '(' << Percantage << ')'<< '\n';
+         if (i == 0) {
+             maxOffset = offset;
+             maxOffsetInt = i;
 
+             minOffset = offset;
+             minOffsetInt = i;
+         }
+         if (offset > maxOffset) {
+             maxOffset = offset;
+             maxOffsetInt = i;
+         }
+         if (offset < minOffset) {
+             minOffset = offset;
+             minOffsetInt = i;
+         }
 
-
-
+         //Personally dont consider the i+1 cheating, check with marc, string interpolation needed,
+         std::cout << "Number " << i+1 << ": " << integers[i] << '(' << Percentage << ')'<< '\n';
+         
     }
+
+    std::cout << '\n';
+    std::cout << "MaxOffset: Number " << maxOffsetInt << " " << maxOffset << '\n';
+    std::cout << "MinOffset: Number " << minOffsetInt << " " << minOffset << '\n';
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
