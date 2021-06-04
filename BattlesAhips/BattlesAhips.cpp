@@ -18,7 +18,7 @@ class Player {
 
             if ((*Enemy).board[place[1] - 48][place[0] - 97])
             {
-                board[place[1] - 48][place[0] - 97] = false;
+                (*Enemy).board[place[1] - 48][place[0] - 97] = false;
                 (*Enemy).boats--;
                 std::cout << "You sank a boat! ";
                 
@@ -50,7 +50,7 @@ int main()
     Player player2;
     player2.boats = 5;
 
-    char place[3];
+    
     
     std::cout << "Firstly, player 1 places your boats" << '\n';
     player1.placeBoats();
