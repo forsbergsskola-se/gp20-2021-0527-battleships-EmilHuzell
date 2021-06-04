@@ -13,10 +13,8 @@ int main()
 
     float maxOffset;
     int maxOffsetInt;
-
     float minOffset;
     int minOffsetInt;
-
     float combinedOffset = 0;
     float avarageOffset;
     for (int i = 0; i < 20; i++) {
@@ -25,7 +23,6 @@ int main()
          float offset = abs(Percentage - 5);
          combinedOffset += offset;
           
-
          if (i == 0) {
              maxOffset = offset;
              maxOffsetInt = i;

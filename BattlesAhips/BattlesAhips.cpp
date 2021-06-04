@@ -8,17 +8,15 @@ int main()
     bool board[10][10] = {false};
 
     int piecesPlaced = 0;
+    char place[3];
     while (piecesPlaced < 5) 
     {
-        std::cout << "Chose a row to place a boat on" << '\n';
-        int row;
-        std::cin >> row;
+        std::cout << "Chose a place to drop a boat" << '\n';
+        
+        std::cin >> place;
 
-        std::cout << "Chose a column to place a boat on" << '\n';
-        int column;
-        std::cin >> column;
-
-        board[row][column] = true;
+        std::cout << (int)place[0] << '\n';
+        board[(int)place[0] - 96][(int)place[1]] = true;
         piecesPlaced++;
     }
 
