@@ -29,7 +29,6 @@ class Player {
 
             int i = 0;
             while (i < boats) {
-                //all horisontal for now
 
                 std::cout << "Chose a place to drop a boat" << '\n';
                 std::cin >> place;
