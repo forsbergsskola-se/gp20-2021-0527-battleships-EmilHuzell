@@ -1,2 +1,3 @@
 ﻿  BattlesAhips.cpp
+C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\BattlesAhips.cpp(53,10): warning C4101: 'place': unreferenced local variable
   BattlesAhips.vcxproj -> C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\Debug\BattlesAhips.exe
