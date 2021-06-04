@@ -16,7 +16,7 @@ int main()
         std::cin >> place;
 
         std::cout << (int)place[0] << '\n';
-        board[(int)place[0] - 96][(int)place[1]] = true;
+        board[place[0] - 97][place[1] - 49] = true;
         piecesPlaced++;
     }
 
