@@ -3,9 +3,6 @@
 
 #include <iostream>
 
-
-
-
 class Player {
     public:
         int boats = 5;
@@ -20,38 +17,41 @@ class Player {
             {
                 (*Enemy).board[place[1] - 48][place[0] - 97] = false;
                 (*Enemy).boats--;
-                std::cout << "You sank a boat! ";
-                
+                std::cout << "Hit";
             }
             else {
-                std::cout << "You missed ";
+                std::cout << "Miss";
             }
-            std::cout << "The enemy has " << (*Enemy).boats << " left" << '\n' << '\n';
+            std::cout << " the enemy has " << (*Enemy).boats << " left" << '\n' << '\n';
         }
         void placeBoats() {
             char place[3];
-            for (int i = 0; i < boats; i++)
-            {
+
+            int i = 0;
+            while (i < boats) {
+                //all horisontal for now
+
                 std::cout << "Chose a place to drop a boat" << '\n';
                 std::cin >> place;
-                board[place[1] - 48][place[0] - 97] = true;
+                if (board[place[1] - 48][place[0] - 97] == true) {
+                    std::cout << "A boat has already been placed there" << '\n';
+                }
+                else {
+                    board[place[1] - 48][place[0] - 97] = true;
+                    i++;
+                }
             }
-            
         }
 };
 
 int main()
 {
- 
-
     Player player1;
     player1.boats = 5;
-    
+
     Player player2;
     player2.boats = 5;
 
-    
-    
     std::cout << "Firstly, player 1 places your boats" << '\n';
     player1.placeBoats();
     std::cout << '\n';
