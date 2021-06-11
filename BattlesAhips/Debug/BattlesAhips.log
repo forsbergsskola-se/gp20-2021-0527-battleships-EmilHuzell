@@ -1,2 +1,8 @@
 ﻿  BattlesAhips.cpp
+C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\BattlesAhips.cpp(183,13): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\BattlesAhips.cpp(195,21): warning C4101: 'y': unreferenced local variable
+C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\BattlesAhips.cpp(192,22): warning C4101: 'direction': unreferenced local variable
+C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\BattlesAhips.cpp(194,21): warning C4101: 'x': unreferenced local variable
+C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\BattlesAhips.cpp(271): warning C4172: returning address of local variable or temporary: gameObject
+C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\BattlesAhips.cpp(254): warning C4172: returning address of local variable or temporary: p
   BattlesAhips.vcxproj -> C:\Users\emilj\Documents\GitHub\gp20-2021-0527-battleships-EmilHuzell\BattlesAhips\Debug\BattlesAhips.exe
